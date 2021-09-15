@@ -1,11 +1,7 @@
-pipeline {
-    agent any
+node {
 
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World from Jenkins File'
-            }
-        }
-    }
+stage('CheckOut'){
+checkout scm
+echo 'checkout successful'
+}
 }
