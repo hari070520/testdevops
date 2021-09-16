@@ -5,7 +5,7 @@ checkout scm
 echo 'checkout successful'
 }
 stage('Build Image'){
-app=docker.build("hari070520/test")
+app=docker.build("my-image:${env.BUILD_ID}")
 echo 'build image successful'
 }
 stage('Test image'){
