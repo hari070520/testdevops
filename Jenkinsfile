@@ -1,5 +1,5 @@
 node {
-
+def app
 stage('CheckOut'){
 checkout scm
 echo 'checkout successful'
