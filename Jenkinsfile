@@ -13,4 +13,12 @@ app.inside{
 sh 'echo "Test Passed"'
 }
 }
+stage('Push Image'){
+docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+
+        
+        /* Push the container to the custom Registry */
+        app.push()
+    }
+}
 }
