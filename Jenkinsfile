@@ -19,8 +19,9 @@ docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
 
         
         /* Push the container to the custom Registry */
-        app.push("${env.BUILD_ID}")
+        //app.push("${env.BUILD_ID}")
         app.push("latest")
+       
     }
 }
 }
